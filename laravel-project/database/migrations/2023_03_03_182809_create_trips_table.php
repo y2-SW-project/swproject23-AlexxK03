@@ -13,10 +13,6 @@ return new class extends Migration
     {
         Schema::create('trips', function (Blueprint $table) {
             $table->id();
-            $table->string("location");
-            $table->strin("booking_reference");
-            $table->string("documentation");
-            $table->foreignId();
             $table->id();
             $table->timestamps();
         });
