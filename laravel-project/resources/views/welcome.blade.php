@@ -7,7 +7,7 @@
                 <h1>Hello World</h1>
                 <h3>This is a laravel-bootstrap template</h3>
                 <div class="mt-5">
-                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-primary">XXX</button>
                     <button type="button" class="btn btn-secondary">Secondary</button>
                     <button type="button" class="btn btn-success">Success</button>
                     <button type="button" class="btn btn-danger">Danger</button>

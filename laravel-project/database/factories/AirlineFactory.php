@@ -17,7 +17,8 @@ class AirlineFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->word,
+            'anchor_aiport' => $this->faker->word,
         ];
     }
 }

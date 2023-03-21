@@ -17,7 +17,11 @@ class TripFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id'=>1,
+            'documentation_id'=>1,
+            'booking_id'=>1,
+            'destination'=>$this->faker->word
+
         ];
     }
 }

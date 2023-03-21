@@ -17,7 +17,7 @@ class DocumentationFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'docs' => "boarding_pass_placeholder.jpeg"
         ];
     }
 }

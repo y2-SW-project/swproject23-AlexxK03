@@ -17,7 +17,8 @@ class BookingFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'flight_id'=>1,
+            'airline_id'=>1,
         ];
     }
 }

@@ -21,8 +21,10 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('restrict');
-            $table->foreign('documentation_id')->references('id')->on('documentation')->onUpdate('cascade')->onDelete('restrict');
-            $table->foreign('booking_id')->references('id')->on('booking')->onUpdate('cascade')->onDelete('restrict');
+
+            $table->foreign('documentation_id')->references('id')->on('documentations')->onUpdate('cascade')->onDelete('restrict');
+
+            $table->foreign('booking_id')->references('id')->on('bookings')->onUpdate('cascade')->onDelete('restrict');
 
         });
     }
@@ -35,6 +37,12 @@ return new class extends Migration
         Schema::table('trips', function (Blueprint $table) {
             $table->dropForeign(['user_id']);
             $table->dropColumn('user_id');
+
+            $table->dropForeign(['documentation_id']);
+            $table->dropColumn('documentatation_id');
+
+            $table->dropForeign(['booking_id']);
+            $table->dropColumn('booking_id');
         });
         Schema::dropIfExists('trips');
     }
