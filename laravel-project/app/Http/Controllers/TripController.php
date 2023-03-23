@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Trip;
 use Illuminate\Http\Request;
 
@@ -12,7 +11,10 @@ class TripController extends Controller
      */
     public function index()
     {
-        //
+        // $trips = Trip::where('user_id',Auth::id())->latest('updated_at')->get(); // The auth id isnt working
+        $trips = Trip::where('user_id')->latest('updated_at')->paginate(1);
+        // dd($trips);
+        return view('trips.index');
     }
 
     /**

@@ -4,7 +4,7 @@
     <div class="container mx-5">
         <div class="row justify-content-center">
             <div>
-                <h1>Hello World</h1>
+                {{-- <h1>Hello World</h1>
                 <h3>This is a laravel-bootstrap template</h3>
                 <div class="mt-5">
                     <button type="button" class="btn btn-primary">XXX</button>
@@ -67,5 +67,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+
+    <h1 class="d-flex justify-content-center">Welcome to your one stop shop for trip organisation!</h1>
+    <h2 class="d-flex justify-content-center">Please log in or register above</h2>
 @endsection
