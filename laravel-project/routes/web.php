@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TripController;
+use App\Models\Trip;
 use Illuminate\Support\Facades\Route;
 
 
@@ -12,7 +13,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('trips.index');
 
 Route::Resource('/trips',TripController::class)->middleware(['auth']);
 
