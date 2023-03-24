@@ -13,7 +13,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('trips.index');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::Resource('/trips',TripController::class)->middleware(['auth']);
 
