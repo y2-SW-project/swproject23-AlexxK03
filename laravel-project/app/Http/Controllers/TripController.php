@@ -12,7 +12,7 @@ class TripController extends Controller
     public function index()
     {
         // $trips = Trip::where('user_id',Auth::id())->latest('updated_at')->get(); // The auth id isnt working
-        $trips = Trip::latest('updated_at')->paginate(1);
+        $trips = Trip::latest('updated_at')->paginate(5);
         // dd($trips);
         return view('trips.index')->with('trips',$trips);
     }
