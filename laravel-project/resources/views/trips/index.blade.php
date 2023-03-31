@@ -12,9 +12,14 @@
                         <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png" class="card-img-top"
                             alt="...">
                         <div class="card-body">
-                            <h3 class="card-title"><strong>Destination: </strong>{{ $trip->destination }}<h3>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="{{ route('trips.show', $trip->id) }}">
+                                <h3 class="card-title"><strong>Destination: </strong>{{ $trip->destination }}<h3>
+                            </a>
+
+                            <p><small>
+                                    Last Updated: {{ $trip->updated_at->diffForHumans() }}
+                            </p></small>
+
                         </div>
                     </div>
                 @empty
