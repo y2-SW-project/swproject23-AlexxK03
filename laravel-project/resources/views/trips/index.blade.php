@@ -4,6 +4,11 @@
     <div>
         <h2 class="d-flex justify-content-center">Your Trips</h2>
     </div>
+    
+    <div class="container p-2">
+        <a href="{{route('trips.create')}}"><button type="button" class="btn btn-primary">Add a new Trip</button></a>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md d-flex">

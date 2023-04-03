@@ -13,4 +13,12 @@
 <h2>
     <strong>Destination: </strong> {{$trip->destination}}
 </h2>
+<p>
+    <strong>Booking References: </strong>{{$trip->booking->id}}
+</p>
+
+<p>
+    <strong>You Flight out on:</strong> {{$trip->booking->flight->date}}
+    <strong>At:</strong> {{$trip->booking->flight->time}}
+</p>
 @endsection
