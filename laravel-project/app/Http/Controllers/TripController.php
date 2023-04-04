@@ -1,13 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Trip;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class TripController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      */
@@ -15,9 +19,9 @@ class TripController extends Controller
     {
         $user = Auth::user();
         // $trips = Trip::where('user_id',Auth::id())->latest('updated_at')->get(); // The auth id isnt working
-        $trips = Trip::where('user_id',Auth::id())->latest('updated_at')->paginate(5);
+        $trips = Trip::where('user_id', Auth::id())->latest('updated_at')->paginate(5);
         // dd($trips);
-        return view('trips.index')->with('trips',$trips);
+        return view('trips.index')->with('trips', $trips);
     }
 
     /**
@@ -26,7 +30,8 @@ class TripController extends Controller
     public function create()
     {
         $bookings = Booking::all();
-        return view('trips.create')->with('booking',$bookings);
+
+        return view('trips.create')->with('booking', $bookings);
     }
 
     /**
@@ -34,16 +39,20 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        $request -> validate([
-            'destination' => 'required',
+        $request->validate([
+            'destination' => 'required'
         ]);
 
         Trip::create([
             'user_id' => Auth::id(),
             'destination' => $request->destination,
-            'booking' => $request->booking
+            // 'booking_id' => $request->booking_id
 
         ]);
+
+
+        return to_route('trips.index')->with('success','Trip created successfully.');
+
     }
 
     /**
@@ -53,10 +62,10 @@ class TripController extends Controller
     {
         $user = Auth::user();
 
-        if($trip->user_id !=Auth::id()){
+        if ($trip->user_id != Auth::id()) {
             return abort(403);
         }
-        return view('trips.show')->with('trip',$trip);
+        return view('trips.show')->with('trip', $trip);
     }
 
     /**
