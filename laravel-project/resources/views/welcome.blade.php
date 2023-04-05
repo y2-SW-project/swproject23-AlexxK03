@@ -71,4 +71,8 @@
 
     <h1 class="d-flex justify-content-center">Welcome to your one stop shop for trip organisation!</h1>
     <h2 class="d-flex justify-content-center">Please log in or register above</h2>
+
+    <div class="container">
+    <img src="laravel-project\storage\app\public\images\logo.png" alt="">
+    </div>
 @endsection

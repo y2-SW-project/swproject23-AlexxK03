@@ -5,6 +5,7 @@
 
 
     <form action="{{ route('trips.store') }}" method="post" enctype="multipart/form-data">
+        <div class="container">
         <div class="py-3 my-3">
             <label for="destitnationInput" class="form-label">
                 <h3><strong>Where are you going?</strong></h3>
@@ -34,4 +35,5 @@
         <button class="btn btn-primary">Add Trip</button>
         <input type="hidden" name="_token"value="{{csrf_token()}}"/>
     </form>
+</div>
 @endsection
