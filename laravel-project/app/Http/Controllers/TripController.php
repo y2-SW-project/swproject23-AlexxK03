@@ -39,14 +39,17 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
+
+
         $request->validate([
-            'destination' => 'required'
+            'destination' => 'required',
+            'booking_id' => 'required'
         ]);
 
         Trip::create([
             'user_id' => Auth::id(),
             'destination' => $request->destination,
-            // 'booking_id' => $request->booking_id
+            'booking_id' => $request->booking_id
 
         ]);
 
