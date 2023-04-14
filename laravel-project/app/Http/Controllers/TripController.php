@@ -91,7 +91,17 @@ class TripController extends Controller
      */
     public function update(Request $request, Trip $trip)
     {
-        //
+        $request->validate([
+            'destination' => 'required',
+            'booking_id' => 'required'
+        ]);
+
+        $trip->update([
+            'destination'=>$request->destination,
+            'booking_id'=>$request->booking_id
+        ]);
+
+        return to_route('trips.show',$trip)->with('success','Trip updated successfully');
     }
 
     /**

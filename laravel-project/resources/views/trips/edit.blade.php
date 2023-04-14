@@ -2,7 +2,7 @@
 
 @section('content')
     <h1 class="d-flex justify-content-center">Update Trip</h1>
-    <form action="{{ route('trips.edit', $trip->id) }}" method="post">
+    <form action="{{ route('trips.update', $trip->id) }}" method="post">
         @method('put')
         @csrf
         <input
@@ -22,6 +22,6 @@
             @endforeach
         </select>
 
-        <button type="submit" value="submit" class="btn btn-primary">Add New Trip</button>
+        <button type="submit" value="submit" class="btn btn-primary">Update Trip</button>
     </form>
 @endsection
