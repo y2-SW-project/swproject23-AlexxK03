@@ -39,7 +39,7 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-
+// dd("success");
 
         $request->validate([
             'destination' => 'required',

@@ -15,6 +15,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
-Route::Resource('/trips',TripController::class)->middleware(['auth']);
+Route::Resource('/trips',TripController::class)->middleware(['auth'])->names('trips');
 
 
