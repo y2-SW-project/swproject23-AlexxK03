@@ -76,7 +76,14 @@ class TripController extends Controller
      */
     public function edit(Trip $trip)
     {
-        //
+
+        $bookings = Booking::all();
+
+        if($trip->user_id != Auth::id()){
+            return abort(403);
+        }
+
+        return view('trips.edit')->with('trip',$trip)->with('booking',$bookings);
     }
 
     /**

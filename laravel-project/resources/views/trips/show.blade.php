@@ -2,6 +2,8 @@
 
 @section('content')
 
+<a href="{{ route('trips.edit', $trip->id) }}"><button type="button" class="btn btn-primary">Update trip</button></a>
+
 <div class="d-flex">
     <p class = "ps-2">
         <strong>Created: </strong> {{$trip->created_at->diffForHumans()}}
