@@ -109,6 +109,12 @@ class TripController extends Controller
      */
     public function destroy(Trip $trip)
     {
-        //
+        if ($trip->user_id != Auth::id()) {
+            return abort(403);
+        }
+
+        $trip->delete();
+
+        return to_route('trips.index');
     }
 }
