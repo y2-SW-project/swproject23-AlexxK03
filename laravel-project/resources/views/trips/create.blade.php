@@ -11,12 +11,11 @@
 
         <select name="booking_id">
             @foreach ($booking as $booking)
-            <option value="{{ $booking->id }}"
-            {{ old('booking_id') == $booking->id ? 'selected' : '' }}>
-            {{ $booking->id }}</option>
+                <option value="{{ $booking->id }}" {{ old('booking_id') == $booking->id ? 'selected' : '' }}>
+                    {{ $booking->id }}</option>
             @endforeach
         </select>
-        
+
         <button type="submit" value="submit" class="btn btn-primary">Add New Trip</button>
     </form>
 @endsection

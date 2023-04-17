@@ -6,7 +6,7 @@
     </div>
 
     <div class="container p-2">
-        <a href="{{route('trips.create')}}"><button type="button" class="btn btn-primary">Add a new Trip</button></a>
+        <a href="{{ route('trips.create') }}"><button type="button" class="btn btn-primary">Add a new Trip</button></a>
     </div>
 
     <div class="container">
@@ -34,56 +34,157 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-secondary text-black mt-5 py-5">
-        <div class="container-lg">
-            <div class="row">
-                <div class="col">
-                    <p class="text-uppercase fw-bold fs-6 pb-3">
-                        <small>about us</small>
-                    </p>
-                    <h3>Get Started</h3>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,
-                        incidunt maiores! Unde error sint suscipit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, error!
-                    </p>
-                </div>
-                <div class="col">
-                    <p class="text-uppercase fw-bold fs-6 pb-3">
-                        <small>Get in touch</small>
-                    </p>
-                    <h3>Follow us</h3>
-                    <ul class="list-group list-group-flush">
-                        <li
-                            class="d-flex list-group-item bg-secondary text-black fs-5 border-0 px-0 py-1"
-                        >
-                        <i class="bi bi-instagram"></i>
-                        <p class="ps-2">Instagram</p>
-                        </li>
-                        <li
-                            class=" d-flex list-group-item bg-secondary text-black fs-5 border-0 px-0 py-1"
-                        >
-                        <i class="bi bi-twitter"></i>
-                        <p class="ps-2">Twitter</p>
-                        </li>
-                        <li
-                            class="d-flex list-group-item bg-secondary text-black fs-5 border-0 px-0 py-1"
-                        >
-                        <i class="bi bi-tiktok"></i>
-                        <p class="ps-2">TikTok</p>
-                        </li>
-                        <li
-                            class="d-flex list-group-item bg-secondary text-black fs-5 border-0 px-0 py-1"
-                        >
-                        <i class="bi bi-facebook"></i>
-                        <p class="ps-2">Facebook</p>
-                        </li>
+    <!-- Footer -->
+    <footer class="bg-secondary text-center text-white mt-4">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
 
-                    </ul>
-                </div>
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control bg-light" />
+                                <label class="form-label" for="form5Example21">Email address</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
 
-            </div>
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                    eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
         </div>
-    </div>
-    <!-- footer end -->
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 @endsection
