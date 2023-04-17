@@ -21,8 +21,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         return view('trips.index');
+    }
+
+    public function documentationIndex(Request $request){
+        // dd($request);
+        return view('documentation.index');
     }
 }

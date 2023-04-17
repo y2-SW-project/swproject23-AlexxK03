@@ -15,9 +15,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home/docs', [App\Http\Controllers\HomeController::class, 'docsindex'])->name('home.documentation.index');
+
+Route::get('/home/docs', [App\Http\Controllers\HomeController::class, 'documentationIndex'])->name('documentation.index');
 
 Route::Resource('/trips',TripController::class)->middleware(['auth'])->names('trips');
+
 Route::Resource('/documentation',DocumentationController::class)->middleware(['auth'])->names('documentation');
 
 

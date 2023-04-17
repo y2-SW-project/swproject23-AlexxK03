@@ -18,7 +18,11 @@ class DocumentationController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
+        $docs = Documentation::all();
+        dd($docs);
 
+        return view('documentation.index')->with('docs', $docs);
     }
 
     /**
