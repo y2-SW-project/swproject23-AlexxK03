@@ -49,7 +49,7 @@ class TripController extends Controller
         Trip::create([
             'user_id' => Auth::id(),
             'destination' => $request->destination,
-            'booking_id' => $request->booking_id
+            'booking_id' => $request->booking_id,
 
         ]);
 

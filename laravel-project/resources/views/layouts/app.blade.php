@@ -22,9 +22,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-secondary shadow-sm">
             <div class="container">
-                <a class="text-decoration-none text-black" href="{{url('/home')}}"><h4><strong>Wingman</strong></h4></a>
+                <a class="text-decoration-none text-black" href="{{url('/trips')}}"><h4><strong>Wingman</strong></h4></a>
 
-                <a class="text-decoration-none text-black ps-4" href="{{url('/home\docs')}}" :active="request()->routeIs('home.documentation.index')"><h5>Docs</h5></a>
+                <a class="text-decoration-none text-black ps-4" href="{{url('/documentations')}}" :active="request()->routeIs('home.documentations.index')"><h5>Docs</h5></a>
 
 
                 <a href=""></a>

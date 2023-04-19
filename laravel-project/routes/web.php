@@ -3,6 +3,7 @@
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\DocumentationController;
 use App\Models\Trip;
+use App\Models\Documentation;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,12 +15,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/trips', [App\Http\Controllers\HomeController::class, 'index'])->name('trips');
 
-Route::get('/home/docs', [App\Http\Controllers\HomeController::class, 'documentationIndex'])->name('documentation.index');
+// Route::get('/documentation', [App\Http\Controllers\HomeController::class, 'documentationIndex'])->name('documentation.index');
 
 Route::Resource('/trips',TripController::class)->middleware(['auth'])->names('trips');
 
-Route::Resource('/documentation',DocumentationController::class)->middleware(['auth'])->names('documentation');
+Route::Resource('/documentations',DocumentationController::class)->middleware(['auth'])->names('documentations');
 
 

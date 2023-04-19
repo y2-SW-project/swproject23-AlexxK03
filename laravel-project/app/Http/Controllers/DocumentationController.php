@@ -2,27 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Trip;
-use App\Models\Booking;
 use App\Models\Documentation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
+
+
 
 class DocumentationController extends Controller
 {
-
-
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $user = Auth::user();
-        $docs = Documentation::all();
-        dd($docs);
-
-        return view('documentation.index')->with('docs', $docs);
+        $docs = Documentation::where('user_id', Auth::id())->get();
+        // dd($docs);
+        return view('documentations.index')->with('docs', $docs);
     }
 
     /**
@@ -30,7 +25,7 @@ class DocumentationController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -38,39 +33,46 @@ class DocumentationController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Documentation $Documentation)
+    public function show(Documentation $documentation)
     {
+        $user = Auth::user();
+        // dd($documentation);
+
+        // if ($doc->user_id != Auth::id()) {
+        //     return abort(403);
+        // }
+
+        return view('documentations.show')->with('doc', $documentation);
 
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Documentation $documentation)
+    public function edit(string $id)
     {
-
-
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Documentation $documentation)
+    public function update(Request $request, string $id)
     {
-
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Documentation $documentation)
+    public function destroy(string $id)
     {
-
+        //
     }
 }
