@@ -25,7 +25,7 @@ class DocumentationController extends Controller
      */
     public function create()
     {
-        //
+        return view('documentations.create');
     }
 
     /**
@@ -33,8 +33,23 @@ class DocumentationController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'docs'=>'file|image'
+        ]);
+
+        $docs = $request->file('docs');
+        // $extention = $docs->getClientOriginalExtension();
+        $filename = date('d-m-Y') . '_' . $request->input('doc_name');
+        $path = $docs->storeAs('public/images',$filename);
+
+        Documentation::create([
+            'user_id'=>Auth::id(),
+            'docs'=>$filename,
+            'doc_name'=>$request->doc_name,
+        ]);
+
+        return to_route('documentations.index');
+        }
 
     /**
      * Display the specified resource.
