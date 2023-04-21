@@ -8,11 +8,8 @@
 
         <div class="mb-3">
             <label for="docs" class="form-label">Upload from PC</label>
-            <x-file-input class="form-control" type="file" field="docs" id="docs"></x-file-input>
+            <input class="form-control-file" name="docs" type="file" field="docs" id="docs">
           </div>
-
-          
-
 
         <button type="submit" value="submit" class="btn btn-primary">Add New Doc</button>
     </form>

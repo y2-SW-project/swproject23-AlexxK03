@@ -33,8 +33,9 @@ class TripController extends Controller
     {
         $bookings = Booking::all();
         $docs = Documentation::all();
+        // dd($bookings);
 
-        return view('trips.create')->with('booking', $bookings)->with('documentation',$docs);
+        return view('trips.create')->with('booking', $bookings)->with('docs', $docs);
     }
 
     /**
@@ -48,12 +49,12 @@ class TripController extends Controller
             'destination' => 'required',
             'booking_id' => 'required'
         ]);
-        
+
         Trip::create([
             'user_id' => Auth::id(),
             'destination' => $request->destination,
             'booking_id' => $request->booking_id,
-            'documentation_id' => $request->booking_id,
+            'documentation_id' => $request->documentation_id,
 
         ]);
 

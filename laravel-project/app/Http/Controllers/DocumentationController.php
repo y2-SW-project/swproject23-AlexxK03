@@ -42,9 +42,10 @@ class DocumentationController extends Controller
         $filename = $request->input('name') . '.' . $extention;
         $path = $docs->storeAs('public/storage/images', $filename);
 
-        dd($filename);
+        // dd($filename);
 
         Documentation::create([
+            // 'user_id' => Auth::id(),
             'user_id' => Auth::id(),
             'doc_name' => $request->doc_name,
             'docs' => $filename
