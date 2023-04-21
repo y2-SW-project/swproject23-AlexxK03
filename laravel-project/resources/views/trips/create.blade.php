@@ -16,6 +16,13 @@
             @endforeach
         </select>
 
+        <div class="form-control">
+            @foreach ($docs as $doc)
+                <input type="checkbox", value="{{ $doc->id }}" name="docs[]"> <img
+                src="{{ asset('storage/images/' . $doc->docs) }}"
+            @endforeach
+        </div>
+
         <button type="submit" value="submit" class="btn btn-primary">Add New Trip</button>
     </form>
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Trip;
 use App\Models\Booking;
+use App\Models\Documentation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -19,7 +20,8 @@ class TripController extends Controller
     {
         $user = Auth::user();
         // $trips = Trip::where('user_id',Auth::id())->latest('updated_at')->get(); // The auth id isnt working
-        $trips = Trip::where('user_id', Auth::id())->latest('updated_at')->paginate(5);
+        $trips = Trip::where('user_id', Auth::id())->latest('updated_at')
+        ->paginate(5);
         // dd($trips);
         return view('trips.index')->with('trips', $trips);
     }
@@ -30,8 +32,9 @@ class TripController extends Controller
     public function create()
     {
         $bookings = Booking::all();
+        $docs = Documentation::all();
 
-        return view('trips.create')->with('booking', $bookings);
+        return view('trips.create')->with('booking', $bookings)->with('documentation',$docs);
     }
 
     /**
@@ -45,11 +48,12 @@ class TripController extends Controller
             'destination' => 'required',
             'booking_id' => 'required'
         ]);
-
+        
         Trip::create([
             'user_id' => Auth::id(),
             'destination' => $request->destination,
             'booking_id' => $request->booking_id,
+            'documentation_id' => $request->booking_id,
 
         ]);
 

@@ -13,8 +13,11 @@
         <div class="row">
             <div class="col-md d-flex">
                 @forelse($trips as $trip)
+                <div class="div d-none">
+                    {{$random = rand(1,30)}}
+                </div>
                     <div class="card mx-2">
-                        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png" class="card-img-top"
+                        <img src="https://picsum.photos/300/200?{{$random}}"class="card-img-top"
                             alt="...">
                         <div class="card-body">
                             <a href="{{ route('trips.show', $trip->id) }}">
