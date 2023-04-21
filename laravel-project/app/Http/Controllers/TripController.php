@@ -41,9 +41,9 @@ class TripController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
-// dd("success");
 
         $request->validate([
             'destination' => 'required',
